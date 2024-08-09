@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #1e1e1d; /* Dark Gray */
+  --primary-color-dark: #161513; /* Darker Gray */
+  --primary-color-light: #a3a3a3; /* Light Gray */
+  --white: #ffffff; /* White */
+  --max-width: 900px;
+  --gradient-1: linear-gradient(to right bottom, #f77d6b, #9e1fdb);
+  --gradient-2: linear-gradient(to right bottom, var(--white) 25%, var(--primary-color));
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--white); /* White background for the whole page */
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+  background-color: var(--white); /* White background for sections */
+  color: var(--primary-color-dark); /* Dark text color for contrast */
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar styling */
+.nav__bar {
+  position: fixed;
+  width: 100%; /* Full width for all screen sizes */
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: var(--white); /* White background for navbar */
+}
+
+.nav__header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white); /* White background for navbar header */
+  border-bottom: 1px solid var(--primary-color-light); /* Light border for separation */
+}
+
+.nav__logo a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color-dark); /* Dark text color for logo */
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--primary-color-dark); /* Dark color for menu button */
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--white); /* White background for mobile menu */
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+  border-top: 1px solid var(--primary-color-light); /* Light border for separation */
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links li {
+  margin: 0.5rem 0;
+}
+
+.nav__links a {
+  color: var(--primary-color-dark); /* Dark color for menu links */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav__links a:hover {
+  color: var(--gradient-1); /* Gradient color on hover */
+}
+
+.header__container img {
+  max-width: 200px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.header__container h1 {
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  color: var(--primary-color-dark); /* Dark text for better readability */
+  text-align: center;
+}
+
+.header__container h1 span {
+  background-image: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__container p {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--primary-color-dark); /* Dark text color */
+  text-align: center;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__btns .btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color); /* Dark button background */
+  border-radius: 5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__btns .btn:hover {
+  background-color: var(--primary-color-light); /* Light background on hover */
+  color: var(--primary-color-dark);
+}
+
+.header__btns a {
+  padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: var(--primary-color-dark); /* Dark text for better visibility */
+  background-color: var(--white);
+  border-radius: 5rem;
+  border: 2px solid var(--primary-color-dark); /* Dark border for contrast */
+}
+
+.header__btns a:hover {
+  color: var(--white);
+  background-color: var(--primary-color-dark);
+}
+
+.skill__container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.skill__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill__item {
+  flex: 1;
+  max-width: 200px;
+}
+
+.skill__bar {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.skill__progress {
+  height: 10px;
+  background-color: #4caf50;
+}
+
+.project__container h2 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.project__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.project__card {
+  max-width: 450px;
+  margin-inline: auto;
+  background-color: var(--white); /* White background for cards */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+.project__card__details {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project__card__details p {
+  color: var(--primary-color-dark);
+}
+
+.project__card__details h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color-dark);
+}
+
+.project__card__details a {
+  font-size: 1.5rem;
+  color: var(--primary-color-dark);
+}
+
+.contact__container {
+  padding: 2rem;
+}
+
+.contact__details {
+  margin-top: 1rem;
+}
+
+.contact__details p {
+  margin: 0.5rem 0;
+  color: var(--primary-color-dark);
+}
+
+.contact__details a {
+  color: var(--primary-color); /* Link color */
+  text-decoration: underline;
+}
+
+.contact__details a:hover {
+  color: #0073e6; /* Hover color */
+}
+
+.social__links a {
+  margin-right: 1rem;
+  color: var(--primary-color-dark);
+  font-size: 1.5rem;
+}
+
+.social__links a:hover {
+  color: #0073e6; /* Hover color for social links */
+}
