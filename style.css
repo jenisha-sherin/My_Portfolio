@@ -49,6 +49,7 @@ ul {
 
 /* Navbar styling */
 
+/* Navbar styling */
 .nav {
   width: 100%;
   background-color: white;
@@ -61,7 +62,7 @@ ul {
 /* Center the navigation bar */
 .nav__bar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Adjusted to space between for mobile menu */
   align-items: center;
   padding: 10px;
 }
@@ -84,24 +85,42 @@ ul {
   font-weight: bold;
 }
 
-
-/* Style for the menu button (if needed) */
+/* Style for the menu button */
 .nav__menu__btn {
-  display: none; /* Hide if not used */
+  display: none; /* Hide by default */
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
   .nav__links {
     flex-direction: column;
-    display: none; /* Hide by default, show on menu button click */
+    background-color: white;
+    position: absolute;
+    top: 100%; /* Adjust to be below the navbar */
+    left: 0;
+    width: 100%;
+    display: none; /* Hide by default */
+    padding: 0;
+  }
+
+  .nav__links li {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav__links.active {
+    display: flex;
   }
 
   .nav__menu__btn {
     display: block;
-    cursor: pointer;
   }
 }
+
 
 
 .header__container img {
