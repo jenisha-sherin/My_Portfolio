@@ -303,7 +303,8 @@ ul {
   display: flex;
   justify-content: center;
   max-width: 500px; /* Set the maximum width of the button container */
-  margin: 20px auto; /* Center the buttons container horizontally */
+  margin: 20px auto; 
+  height: 60px;/* Center the buttons container horizontally */
 }
 
 /* Style the individual toggle buttons */
