@@ -7,41 +7,35 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Web Design Mastery | WDM</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Portfolio | Jenisha Sherin</title>
   </head>
   <body>
     <nav>
-      <div class="max-w-sm mx-auto bg-white p-4">
-        <div class="nav__bar">
-          <div class="nav__header">
-            <div class="nav__logo">
-              <a href="#">WDM</a>
-            </div>
-            <div class="nav__menu__btn" id="menu-btn">
-              <i class="ri-menu-line"></i>
-            </div>
-          </div>
-          <ul class="nav__links" id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+  <div class="max-w-sm mx-auto bg-white p-4">
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
         </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home" style="font-size: larger;">HOME</a></li>
+          <li><a href="#skills"style="font-size: larger;">SKILLS</a></li>
+          <li><a href="#project" style="font-size: larger;">PROJECTS</a></li>
+          <li><a href="#contact" style="font-size: larger;">CONTACT</a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
 
     <header class="section__container header__container" id="home">
       <img src="assets/avatar.png" alt="header" />
       <div class="typewriter">
-        <h1>I do code and make content <span>about it!</span></h1>
+        <h1>Hello, I'm  <span>JENISHA SHERIN B</span></h1>
       </div>
       <p>
-        I am a 2024 pass-out with a strong foundation in web development. My
-        portfolio showcases my projects, skills, and my journey as a budding
-        Full Stack Developer. I am eager to start my career and contribute to
-        innovative teams.
+        A budding Full Stack Developer with a passion for creating dynamic web experiences.
       </p>
       <div class="header__btns">
         <button class="btn">Get in Touch</button>
@@ -50,7 +44,7 @@
     </header>
 
     <section class="section__container skill__container" id="skills">
-      <h2>EXPERIENCE WITH</h2>
+      <h2 style="text-align: ce;">EXPERIENCE WITH</h2><br>
       <ul class="skill__flex">
         <li>
           <div class="skill__item">
@@ -60,7 +54,7 @@
             </div>
             <p>HTML - 75%</p>
           </div>
-        </li>
+        </li> 
         <li>
           <div class="skill__item">
             <span><i class="ri-css3-fill"></i></span>
@@ -88,6 +82,7 @@
             <p>ReactJS - 60%</p>
           </div>
         </li>
+        <br>
         <li>
           <div class="skill__item">
             <span><i class="ri-nodejs-line"></i></span>
@@ -104,59 +99,116 @@
       <h2>PROJECTS</h2>
       <div class="project__grid">
         <div class="project__card">
-          <img src="assets/project-1.jpg" alt="project" />
+          <img src="assets/project1.jpg" alt="project" style="height: 150px; width:100%;"/>
           <div class="project__card__details">
             <div>
-              <p>Seamless User Experience</p>
-              <h4>Stunning Landing Page</h4>
+              <h4>Plant Disease Detection Using Deep learning</h4>
+            </div>
+            <a href="https://github.com/jenisha-sherin/Plant-Disease-Detection-Using-Deep-Learning"><i class="ri-arrow-right-up-line"></i></a>
+          </div>
+        </div>
+        <div class="project__card">
+          <img src="assets/project2.jpg" alt="project" style="height: 150px; width:100%;"/>
+          <div class="project__card__details">
+            <div>
+              <h4>Optical Character Recognition System (OCR)</h4>
             </div>
             <a href="#"><i class="ri-arrow-right-up-line"></i></a>
           </div>
         </div>
+
         <div class="project__card">
-          <img src="assets/project-2.jpg" alt="project" />
+          <img src="assets/project4.jpg" alt="project" style="height: 150px; width:500px;"/>
           <div class="project__card__details">
             <div>
-              <p>Discover New Destinations</p>
-              <h4>Explore the World</h4>
+              <h4>AI Enabled Car Parking Using Open CV</h4>
+            </div>
+            <a href="https://github.com/naanmudhalvan-SI/PBL-NT-GP--5163-1680776290"><i class="ri-arrow-right-up-line"></i></a>
+          </div>
+        </div>
+        <div class="project__card">
+          <img src="assets/project3.jpg" alt="project" style="height: 150px; width:500px;"/>
+          <div class="project__card__details">
+            <div>
+              <h4>E-COMMERCE WEBSITE&nbsp;&nbsp;&nbsp;</h4>
             </div>
             <a href="#"><i class="ri-arrow-right-up-line"></i></a>
           </div>
         </div>
       </div>
     </section>
+    <h1 style="text-align: center;">EXPERIENCE & EDUCATION</h1>
+    <div id="experience-education" class="section__container">
+      <div class="toggle-buttons">
+          <button class="toggle-button active" id="experience-btn">Experience</button>
+          <button class="toggle-button" id="education-btn">Education</button>
+      </div>
+  
+      <div id="experience" class="section__content active">
+          <h2 style="margin-left: 20px;padding: 6px;">Experience :</h2>
+          <div class="experience__card">
+              <h3 style="margin-left:25px;padding:5px;">Web Development Intern</h3>
+              <p style="margin-left: 20px;padding: 6px;"><strong>Company:</strong> AK Infopark Private Limited, Nagercoil</p>
+              <p style="margin-left: 20px;padding: 6px;"><strong>Duration:</strong> 1 Month</p>
+              <p style="margin-left: 20px;padding: 6px;">
+                  During my internship at AK Infopark, I had the opportunity to work on developing an <span style="color: blue;"> E-Commerce website.</span>
+                  This project involved various aspects of web development, including front-end design and back-end functionality.
+                  I gained valuable experience in creating responsive, user-friendly web application and collaborating with a team
+              </p>
+          </div>
+      </div>
+  
+      <div id="education" class="section__content">
+          <h2 style="margin-left: 20px;padding: 5px;">Education</h2>
+          <div class="education__card">
+              <h3 style="margin-left: 20px;padding: 5px;">B.E- Computer Science</h3>
+              <p style="margin-left: 20px;padding: 5px;"><strong>Institution:</strong> Cape Institute of Technology, Anna University</p>
+              <p style="margin-left: 20px;padding: 5px;"><strong>Duration:</strong> 2020 - 2024</p>
+              <p style="margin-left: 20px;padding: 5px;">
+                  Completed my Bachelor of Engneering in Computer Science with a Strong Foundation in <span style="color: blue;"> HTML&nbsp;| CSS&nbsp;|JAVASCRIPT&nbsp;|ReactJS&nbsp; |mySQL&nbsp;|PHP&nbsp;|Java
+                    &nbsp;|Web Development&nbsp;& Software Engineering Principles&nbsp; </span>. Actively Participated in 
+                    <b> Projects and Internships to Gain Practical Experience .</b>
+              </p>
+          </div>
+      </div>
+    </div>
+  
 
-    <section class="section__container contact__container" id="contact">
-      <h2>Contact Me</h2>
-      <p>
-        I'd love to hear from you! Whether you have a project in mind, a
-        question about my work, or just want to connect, feel free to reach
-        out. You can contact me via email or through my social media channels.
-      </p>
+  <section style="margin-left: 20px;padding: 6px;">
+  <div style="margin: 10px;">
+      <div class="col-lg-6">
+        <h1 class="display-5 mb-0">Let's Work Together&nbsp; :</h1>
+    </div>
+    <div class="col-lg-6 text-lg-end">
+      <button 
+          onclick="window.open('https:/wa.me/+919655087283', '_blank')" 
+          style="width: 300px; margin-top: 10px; border-radius: 1rem; height: 40px; padding: 10px 20px; text-align:center; background-color: violet; color: white;"> 
+          Send Message
+      </button>
+  </div>
+  
       <div class="contact__details">
-        <p>Phone: 9655087283</p>
-        <p>Email: <a href="mailto:jenishasherincse2020@gmail.com">jenishasherincse2020@gmail.com</a></p>
+        <p>Phone &nbsp;:</p>
+        <span style="font-size: large;color: blue;">9655087283</span>
+        <p>Email: <a href="mailto:jenishasherincse2020@gmail.com"><span style="font-size: large;color: blue;">
+          jenishasherincse2020@gmail.com</span></a></p>
         <div class="social__links">
-          <a href="https://www.instagram.com/yourusername" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/sherin8814/" target="_blank" aria-label="Instagram">
             <i class="ri-instagram-fill"></i>
           </a>
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/jenisha-sherin-b-b0a5b9267/" target="_blank" aria-label="LinkedIn" >
             <i class="ri-linkedin-fill"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="section__container footer__container">
-        <h2>Contact</h2>
-        <p>
-          I'd love to hear from you! Whether you have a project in mind, a
-          question about my work, or just want to connect, feel free to reach
-          out. You can contact me via email or through my social media channels.
-          I am always excited to explore new opportunities and collaborations.
-        </p>
-      </div>
-    </footer>
+    <footer class="footer__container section__container">
+      <p>&copy; JENISHA&nbsp;2024 All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./main.js"></script>
+
   </body>
 </html>

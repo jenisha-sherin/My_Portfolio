@@ -66,3 +66,45 @@ ScrollReveal().reveal(".footer__socials", {
   ...scrollRevealOption,
   delay: 1500,
 });
+
+document.getElementById('experience-btn').addEventListener('click', function() {
+  document.getElementById('experience').classList.add('active');
+  document.getElementById('education').classList.remove('active');
+  this.classList.add('active');
+  document.getElementById('education-btn').classList.remove('active');
+});
+
+document.getElementById('education-btn').addEventListener('click', function() {
+  document.getElementById('education').classList.add('active');
+  document.getElementById('experience').classList.remove('active');
+  this.classList.add('active');
+  document.getElementById('experience-btn').classList.remove('active');
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const experienceBtn = document.getElementById('experience-btn');
+  const educationBtn = document.getElementById('education-btn');
+  const experienceSection = document.getElementById('experience');
+  const educationSection = document.getElementById('education');
+
+  // Show experience section by default
+  experienceSection.classList.add('active');
+  experienceBtn.classList.add('active');
+
+  experienceBtn.addEventListener('click', function() {
+    experienceSection.classList.add('active');
+    educationSection.classList.remove('active');
+    experienceBtn.classList.add('active');
+    educationBtn.classList.remove('active');
+  });
+
+  educationBtn.addEventListener('click', function() {
+    educationSection.classList.add('active');
+    experienceSection.classList.remove('active');
+    educationBtn.classList.add('active');
+    experienceBtn.classList.remove('active');
+  });
+});
+

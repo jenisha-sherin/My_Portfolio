@@ -5,7 +5,7 @@
   --primary-color-dark: #161513; /* Darker Gray */
   --primary-color-light: #a3a3a3; /* Light Gray */
   --white: #ffffff; /* White */
-  --max-width: 900px;
+  --max-width: 100%;
   --gradient-1: linear-gradient(to right bottom, #f77d6b, #9e1fdb);
   --gradient-2: linear-gradient(to right bottom, var(--white) 25%, var(--primary-color));
 }
@@ -13,19 +13,21 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
+
+
 
 html,
 body {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
-  background-color: var(--white); /* White background for the whole page */
+  color: black;
+  background-color: white; /* White background for the whole page */
 }
 
 .section__container {
   max-width: var(--max-width);
-  margin: auto;
+  margin: 0;
   padding: 5rem 1rem;
   background-color: var(--white); /* White background for sections */
   color: var(--primary-color-dark); /* Dark text color for contrast */
@@ -46,72 +48,61 @@ ul {
 }
 
 /* Navbar styling */
-.nav__bar {
+
+.nav {
+  width: 100%;
+  background-color: white;
   position: fixed;
-  width: 100%; /* Full width for all screen sizes */
   top: 0;
   left: 0;
-  z-index: 9;
-  background-color: var(--white); /* White background for navbar */
+  z-index: 1000; /* Ensure it's above other content */
 }
 
-.nav__header {
-  padding: 1rem;
+/* Center the navigation bar */
+.nav__bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--white); /* White background for navbar header */
-  border-bottom: 1px solid var(--primary-color-light); /* Light border for separation */
-}
-
-.nav__logo a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--primary-color-dark); /* Dark text color for logo */
-}
-
-.nav__menu__btn {
-  font-size: 1.5rem;
-  color: var(--primary-color-dark); /* Dark color for menu button */
-  cursor: pointer;
-}
-
-.nav__links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: var(--white); /* White background for mobile menu */
-  transition: 0.5s;
-  z-index: -1;
-  transform: translateY(-100%);
-  border-top: 1px solid var(--primary-color-light); /* Light border for separation */
+  align-items: center;
+  padding: 10px;
 }
 
-.nav__links.open {
-  transform: translateY(0);
+/* Style for navigation links */
+.nav__links {
+  display: flex;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
 }
 
 .nav__links li {
-  margin: 0.5rem 0;
+  margin: 0 15px; /* Space between items */
 }
 
 .nav__links a {
-  color: var(--primary-color-dark); /* Dark color for menu links */
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 500;
+  text-decoration: none;
+  color: black; /* Adjust to match your design */
+  font-weight: bold;
 }
 
-.nav__links a:hover {
-  color: var(--gradient-1); /* Gradient color on hover */
+
+/* Style for the menu button (if needed) */
+.nav__menu__btn {
+  display: none; /* Hide if not used */
 }
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .nav__links {
+    flex-direction: column;
+    display: none; /* Hide by default, show on menu button click */
+  }
+
+  .nav__menu__btn {
+    display: block;
+    cursor: pointer;
+  }
+}
+
 
 .header__container img {
   max-width: 200px;
@@ -154,7 +145,7 @@ ul {
   border: none;
   font-size: 1rem;
   color: var(--white);
-  background-color: var(--primary-color); /* Dark button background */
+  background-color: var(--primary-color-dark); /* Dark button background */
   border-radius: 5rem;
   transition: 0.3s;
   cursor: pointer;
@@ -183,11 +174,12 @@ ul {
 .skill__container h2 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 200rem;
   letter-spacing: 2px;
+  color: black;
   background: var(--gradient-2);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: solid black;
   text-align: center;
 }
 
@@ -201,7 +193,7 @@ ul {
 
 .skill__item {
   flex: 1;
-  max-width: 200px;
+  max-width: 200px;/* Full width, adjust as needed */
 }
 
 .skill__bar {
@@ -212,8 +204,8 @@ ul {
 }
 
 .skill__progress {
-  height: 10px;
-  background-color: #4caf50;
+  height: 20px;
+  background-color: #4caf50 ;
 }
 
 .project__container h2 {
@@ -222,7 +214,7 @@ ul {
   font-weight: 700;
   background: var(--gradient-2);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: black;
   text-align: center;
 }
 
@@ -246,6 +238,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+
 }
 
 .project__card__details p {
@@ -294,3 +287,143 @@ ul {
 .social__links a:hover {
   color: #0073e6; /* Hover color for social links */
 }
+.footer__container {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary-color-dark);
+  color: whitesmoke;
+  text-decoration-color: #f0f0f0;
+  width: 100%;
+}
+/* Style for the toggle buttons container */
+/* Style the toggle buttons container */
+/* Container for the buttons */
+/* Container for the buttons */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  max-width: 500px; /* Set the maximum width of the button container */
+  margin: 20px auto; /* Center the buttons container horizontally */
+}
+
+/* Style the individual toggle buttons */
+.toggle-button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 1rem;
+}
+
+/* Active state style */
+.toggle-button.active {
+  background-color: violet;
+  color: white;
+}
+
+/* Content sections hidden by default */
+.content-section {
+  display: none;
+  padding: 20px;
+  border: 2px solid violet;
+  background-color: #f9f9f9;
+  width: 80%;
+  height: 300px; /* You can adjust the height here */
+  margin-left: 30px;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Show the active content section */
+.content-section.active {
+  display: block;
+}
+
+/* Content sections hidden by default */
+.content-section {
+  display: block;
+  padding: 20px;
+  border: 2px solid violet;
+  background-color: #f9f9f9;
+  width: 80%;
+  height: 300px; /* You can adjust the height here */
+  margin: 0 auto;
+  margin-left: 50px;
+  text-align: center;
+}
+
+/* Show the active content section */
+.content-section.active {
+  display: block;
+}
+
+
+/* Hide sections by default */
+#experience,
+#education {
+  display: none;
+}
+
+/* Initially show the experience section */
+#experience.active {
+  display: block;
+}
+
+/* Initially hide the education section */
+#education.active {
+  display: block;
+}
+
+/* Responsive adjustments (if necessary) */
+@media (max-width: 768px) {
+  .toggle-buttons {
+    flex-direction: column;
+  }
+}
+
+#portfolio-flters li {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--dark);
+  cursor: pointer;
+  transition: .5s;
+  border-bottom: 2px solid transparent;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.portfolio-img {
+  position: relative;
+}
+
+.portfolio-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(98, 68, 197, .9);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 30px;
+  padding-bottom: 100px !important;
+  opacity: 0;
+  transition: .5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+  opacity: 1;
+  padding-bottom: 30px !important;
+}
+
