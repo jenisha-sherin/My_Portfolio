@@ -229,7 +229,7 @@ ul {
 
 .skill__progress {
   height: 20px;
-  background-color: #4caf50;
+  background-color:rgba(248, 14, 248, 0.596) ;
 }
 
 .project__container h2 {
