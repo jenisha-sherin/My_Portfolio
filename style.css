@@ -17,6 +17,7 @@
 }
 
 html,
+
 body {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
@@ -452,3 +453,95 @@ ul {
 }
 
 /* Initially hide the menu off the screen */
+/* Large Devices (Desktops and Laptops) */
+@media (max-width: 1200px) {
+  .header__container h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .skill__container, .project__container {
+    padding: 4rem 1rem;
+  }
+
+  .project__card {
+    max-width: 400px;
+  }
+
+  .contact__container {
+    padding: 1.5rem;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+  .nav__bar {
+    flex-direction: column;
+  }
+
+  .header__container h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .header__btns {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill__flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toggle-buttons {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .toggle-button {
+    margin: 10px 0;
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+  .nav {
+    padding: 10px;
+  }
+
+  .header__container h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .header__container p {
+    font-size: 0.9rem;
+  }
+
+  .skill__item {
+    max-width: 100%;
+  }
+
+  .project__card {
+    margin-inline: 0;
+    max-width: 90%;
+  }
+
+  .footer__container {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .contact__details p {
+    font-size: 0.85rem;
+  }
+
+  .social__links a {
+    font-size: 1.2rem;
+  }
+}
